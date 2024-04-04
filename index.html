@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>golden | gym</title>
   </head>
   <body>
@@ -15,7 +15,9 @@
 
     </div>
 <div style="display: none;"> 
-
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HwT30uIPFqU?si=DXKdXGAdxpkV5Pql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HwT30uIPFqU?si=DXKdXGAdxpkV5Pql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
 </div>
 <script>
   var loader =document.getElementById("perloder");
@@ -23,7 +25,25 @@
       loader.style.display="none";
   })
 </script>
-
+<!-- start nav bar -->
+<div class="nav_bar">
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <label class="logo">golden | gym</label>
+  <ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Feedback</a></li>
+  </ul>
+</nav>
+</div>
+<section></section>
+<!-- end nav bar -->
     <header class="section__container header__container">
       <div class="header__content">
         <span class="bg__blur"></span>
@@ -35,16 +55,32 @@
           fitter, and more confident you. Sign up for 'Make Your Body Shape' now
           and witness the incredible transformation your body is capable of!
         </p>
+
+        
         <a href="login.html"><button class="btn">log in now!</button></a>
+      
       </div>
       <div class="header__image">
         <img src="assets/header.png" alt="header" />
       </div>
     </header>
+    <div class="Real-Time" style="background-color: rgba(128, 128, 128, 0.164);">
+<div class="Real-Time_Occupancy">
+  <h2>Gym Capacity <span>Now</span></h2> 
+  <div id="myProgress">
+    <div id="myProgress">
+      <div id="myBar">10%</div>
+    </div>
+  <br>
+<button onclick="move()">Click Me</button> 
 
+</div>
+</div>
     <section class="section__container explore__container">
       <div class="explore__header">
+        <div class="reveal">
         <h2 class="section__header">EXPLORE OUR PROGRAM</h2>
+        </div>
         <div class="explore__nav">
           <span><i class="ri-arrow-left-line"></i></span>
           <span><i class="ri-arrow-right-line"></i></span>
@@ -97,6 +133,7 @@
         <img src="assets/class-2.jpg" alt="class" class="class__img-2" />
       </div>
       <div class="class__content">
+        <div class="reveal">
         <h2 class="section__header">THE CLASS YOU WILL GET HERE</h2>
         <p>
           Led by our team of expert and motivational instructors, "The Class You
@@ -105,13 +142,15 @@
           exercises. Each class is carefully curated to keep you engaged and
           challenged, ensuring you never hit a plateau in your fitness
           endeavors.
-        </p>
+        </p></div>
         <button class="btn">Book A Class</button>
       </div>
     </section>
 
     <section class="section__container join__container">
+      <div class="reveal">
       <h2 class="section__header">WHY JOIN US ?</h2>
+      </div>
       <p class="section__subheader">
         Our diverse membership base creates a friendly and supportive
         atmosphere, where you can make friends and stay motivated.
@@ -151,10 +190,11 @@
         cater to different preferences and fitness aspirations.
       </p>
       <div class="price__grid">
+        <div class="reveal">
         <div class="price__card">
           <div class="price__card__content">
             <h4>Basic Plan</h4>
-            <h3>$16</h3>
+            <h3>£150</h3>
             <p>
               <i class="ri-checkbox-circle-line"></i>
               Smart workout plan
@@ -165,11 +205,12 @@
             </p>
           </div>
           <button class="btn price__btn">Join Now</button>
-        </div>
+        </div></div>
+        <div class="reveal">
         <div class="price__card">
           <div class="price__card__content">
             <h4>Weekly Plan</h4>
-            <h3>$25</h3>
+            <h3>£400</h3>
             <p>
               <i class="ri-checkbox-circle-line"></i>
               PRO Gyms
@@ -184,11 +225,12 @@
             </p>
           </div>
           <button class="btn price__btn">Join Now</button>
-        </div>
+        </div></div>
+        <div class="reveal">
         <div class="price__card">
           <div class="price__card__content">
             <h4>Monthly Plan</h4>
-            <h3>$45</h3>
+            <h3>£900</h3>
             <p>
               <i class="ri-checkbox-circle-line"></i>
               ELITE Gyms & Classes
@@ -211,7 +253,7 @@
             </p>
           </div>
           <button class="btn price__btn">Join Now</button>
-        </div>
+        </div>  
       </div>
     </section>
 
@@ -278,5 +320,46 @@
     <div class="footer__bar">
       Copyright © 2024 noxus. All rights reserved.
     </div>
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+      
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+      
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+      
+      window.addEventListener("scroll", reveal);
+      
+          </script>
+<script>
+  var i = 0;
+  function move() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 10;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width  + "%";
+        }
+      }
+    }
+  }
+  </script>
   </body>
 </html>
